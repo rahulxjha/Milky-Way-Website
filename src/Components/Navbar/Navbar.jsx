@@ -14,6 +14,7 @@ function Navbar() {
           <li><a href="product">Product</a></li>
           <li><a href="#">Cart</a></li>
           <li><a href="#">Contact</a></li>
+          <li><a href="#">About us</a></li>
         </ul>
       </div>
       <div className="navbar-right">
