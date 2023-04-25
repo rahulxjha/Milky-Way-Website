@@ -8,6 +8,7 @@
   align-items: center;
   padding: 10px;
   background-color: rgba(255, 255, 255);
+  border-bottom: 1px solid rgb(234, 234, 234);
 }
 
 .navbar ul {

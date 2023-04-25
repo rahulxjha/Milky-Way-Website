@@ -11,7 +11,7 @@ function Navbar() {
       <div className="navbar-center">
         <ul>
           <li><a href="#">Home</a></li>
-          <li><a href="#">Product</a></li>
+          <li><a href="product">Product</a></li>
           <li><a href="#">Cart</a></li>
           <li><a href="#">Contact</a></li>
         </ul>
