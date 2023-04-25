@@ -46,3 +46,12 @@ body {
 .card-content p {
   margin-bottom: 20px;
 }
+
+.btn{
+  color: white;
+  background-color: rgb(93, 112, 122);
+  border-radius: 6px;
+  padding: 5px;
+  margin-right: 20px;
+  cursor: pointer;
+}
