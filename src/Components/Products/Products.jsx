@@ -40,7 +40,7 @@ const Products = () => {
                     <img src={ghee} alt="ghee" />
                     <div class="card-content">
                         <h2>Shuddh Desi Ghee</h2>
-                        <p>Shuddh Desi Ghee. No preservatives, chemicals used. <br />Price: 800<span>&#8377;</span> for 1 Kg.</p>
+                        <p>Pure ghee of buffalo's milk. <br />Price: 800<span>&#8377;</span> for 1 Kg.</p>
                         <button className='btn'>Add to cart</button>
                         <button className='btn'>Buy Now</button>
                     </div>
@@ -51,7 +51,7 @@ const Products = () => {
                     <img src={paneer} alt="paneer" />
                     <div class="card-content">
                         <h2>Paneer</h2>
-                        <p>Fresh paneer without using any chemical to preserve. <br />Price: 280<span>&#8377;</span> for 1 Kg. </p>
+                        <p>Fresh high protein paneer . <br />Price: 280<span>&#8377;</span> for 1 Kg. </p>
                         <button className='btn'>Add to cart</button>
                         <button className='btn'>Buy Now</button>
                     </div>
