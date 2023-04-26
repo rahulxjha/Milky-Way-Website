@@ -2,8 +2,8 @@ body {
   font-family: 'Quicksand', sans-serif;
 }
 
-.product h1{
-  margin-top : 35px;
+.product h1 {
+  margin-top: 35px;
   font-size: 35px;
   text-align: center;
   color: white;
@@ -13,25 +13,24 @@ body {
 .card-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between; 
-  background: url(../../img/product-bg.jpg);
+  justify-content: space-between;
+  background: url(../../img/product-bg.jpg) no-repeat;
+
 }
 
 .card {
-  border-radius: 10px; 
+  border-radius: 10px;
   box-sizing: border-box;
-  width: 250px; /* Account for margin/padding of card element */
-  margin: 40px 60px; /* Add margin/padding to each card element */
+  width: 250px;
+  margin: 40px 60px;
   height: 400px;
-  background-color: #efebeb; /* Optional: add a background color to each card */
+  background-color: #efebeb;
   box-sizing: border-box;
-  
+  border: 1px solid rgb(151, 151, 151);
 }
 
-
-
 .card:hover {
-  box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.3);
 }
 
 .card img {
@@ -52,7 +51,7 @@ body {
   margin-bottom: 20px;
 }
 
-.btn{
+.btn {
   color: white;
   background-color: rgb(93, 112, 122);
   border-radius: 6px;
