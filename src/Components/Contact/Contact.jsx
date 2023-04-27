@@ -15,7 +15,7 @@ const Contact = () => {
               <label htmlFor="">Email:</label><br /><input type="text" placeholder="Enter your email"></input><br />
             </div>
             <div className="form-group">
-              <label htmlFor="">Tell us:</label><br /><textarea name="" id="" cols="30" rows="10"></textarea><br />
+              <label htmlFor="">Tell us:</label><br /><textarea name="" id="" cols="30" rows="8"></textarea><br />
             </div>
             <button id='contact-btn'>Submit</button>
           </fieldset>
