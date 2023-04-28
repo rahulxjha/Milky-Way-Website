@@ -8,7 +8,7 @@ import paneer from '../../img/paneer.jpg';
 
 const Products = () => {
     return (
-        <section className='product'>
+        <section id='product'>
             <h1>Our Products</h1>
             <div className='card-container'>
 

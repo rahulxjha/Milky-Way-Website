@@ -1,28 +1,34 @@
 import React from 'react';
 import '../Contact/contact.css';
+import { useState } from 'react';
+import { useSmoothScroll } from '../SmoothScroll';
 
-const Contact = () => {
+function ContactForm() {
+  useSmoothScroll();
+
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log(`Name: ${name}\nEmail: ${email}\nMessage: ${message}`);
+  };
+
   return (
     <section id='contact'>
       <h1>Contact us</h1>
-      <div id="contact-box">
-        <form action="" method="get">
-          <fieldset>
-            <div className="form-group">
-              <label htmlFor="">Name:</label><br /><input type="text" placeholder="Enter your name"></input><br />
-            </div>
-            <div className="form-group">
-              <label htmlFor="">Email:</label><br /><input type="text" placeholder="Enter your email"></input><br />
-            </div>
-            <div className="form-group">
-              <label htmlFor="">Tell us:</label><br /><textarea name="" id="" cols="30" rows="8"></textarea><br />
-            </div>
-            <button id='contact-btn'>Submit</button>
-          </fieldset>
-        </form>
-      </div>
+      <form onSubmit={handleSubmit}>
+        <label htmlFor="name">Name</label>
+        <input type="text" id="name" value={name} onChange={(event) => setName(event.target.value)} />
+        <label htmlFor="email">Email</label>
+        <input type="email" id="email" value={email} onChange={(event) => setEmail(event.target.value)} X />
+        <label htmlFor="message">Message</label>
+        <textarea id="message" value={message} onChange={(event) => setMessage(event.target.value)}></textarea>
+        <button type="submit">Submit</button>
+      </form>
     </section>
-  )
+  );
 }
 
-export default Contact
+export default ContactForm;
