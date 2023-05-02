@@ -12,7 +12,27 @@ function ContactForm() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(`Name: ${name}\nEmail: ${email}\nMessage: ${message}`);
+    const formData = {
+      name,
+      email,
+      message
+    };
+    fetch('/api/contact', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(formData)
+    })
+      .then(response => response.json())
+      .then(data => {
+        console.log('Form data stored successfully:', data);
+        // Do whatever you need to do after the data is stored
+      })
+      .catch(error => {
+        console.error('Error storing form data:', error);
+        // Handle the error
+      });
   };
 
   return (
@@ -22,7 +42,7 @@ function ContactForm() {
         <label htmlFor="name">Name</label>
         <input type="text" id="name" value={name} onChange={(event) => setName(event.target.value)} />
         <label htmlFor="email">Email</label>
-        <input type="email" id="email" value={email} onChange={(event) => setEmail(event.target.value)} X />
+        <input type="email" id="email" value={email} onChange={(event) => setEmail(event.target.value)} />
         <label htmlFor="message">Message</label>
         <textarea id="message" value={message} onChange={(event) => setMessage(event.target.value)}></textarea>
         <button type="submit">Submit</button>
