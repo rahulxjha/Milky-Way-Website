@@ -74,3 +74,15 @@ textarea:focus {
     box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
     outline: none;
 }
+
+@media (max-width: 767px) {
+    #contact form {
+        width: 80%;
+    }
+
+    #contact button {
+        font-size: 20px;
+        padding: 4px 8px;
+    }
+}
+

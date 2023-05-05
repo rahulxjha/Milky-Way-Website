@@ -1,3 +1,7 @@
+* {
+    margin: 0px;
+  }
+
 .landing-page {
     background-image: url(../../img/landing-page.jpg);
     height: 100vh;
@@ -15,7 +19,6 @@
 .landing-page p {
     animation-name: slideIn;
     animation-duration: 1.5s;
-
     text-align: center;
     font-size: 50px;
     color: white;

@@ -1,3 +1,7 @@
+* {
+  margin: 0px;
+}
+
 #footer {
     background-color: #f5f5f5;
     padding: 20px;
@@ -18,3 +22,16 @@
     font-weight: bold;
   }
   
+  @media screen and (max-width: 767px) {
+    #footer{
+      width: 90%;
+    }
+
+    img{
+      height: 35px;
+    }
+
+    .footer-cont{
+      font-size: 12px;
+    }
+  }

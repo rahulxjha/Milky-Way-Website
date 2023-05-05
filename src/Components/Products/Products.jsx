@@ -8,7 +8,7 @@ import paneer from '../../img/paneer.jpg';
 
 const Products = () => {
     return (
-        <>
+        <section id='product'>
             <h1>Our Products</h1>
             <div className='card-container'>
 
@@ -29,7 +29,7 @@ const Products = () => {
                     <div class="card-content">
                         <h2>Dahi</h2>
                         <p>Fresh Dahi of buffalo's milk. <br />Price: 80<span>&#8377;</span> for 1 Kg.</p>
-                        
+
                         <button className='btn'>Add to cart</button>
                         <button className='btn'>Buy Now</button>
                     </div>
@@ -58,7 +58,7 @@ const Products = () => {
                 </div>
 
             </div>
-        </>
+        </section>
     )
 }
 

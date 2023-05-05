@@ -7,6 +7,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 10px;
+  width: 98.5%;
   background-color: rgba(255, 255, 255);
   border-bottom: 1px solid rgb(234, 234, 234);
 }
@@ -48,4 +49,35 @@
 .logo {
   height: 50px;
   cursor: pointer;
+}
+
+@media screen and (max-width: 767px) {
+  .navbar {
+    flex-direction: column;
+    width: 96%;
+  }
+
+  .navbar ul li a {
+    font-size: 0.95rem;
+    padding: 0px 5px;
+    
+  }
+
+  .navbar-right {
+    margin-top: 10px;
+    background-color: rgba(0, 0, 0,0.5) ;
+    border-radius: 2px;
+    padding: 1px 4px;
+  }
+
+  .navbar-right a {
+    font-size: 0.93rem;
+    color: white;
+  }
+
+  .logo {
+    height: 38px;
+    cursor: pointer;
+  }
+
 }
