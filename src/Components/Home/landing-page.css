@@ -34,3 +34,13 @@
         transform: translateX(0%);
     }
 }
+
+@media screen and (max-width: 767px) {
+    .landing-page p {
+        font-size: 30px;
+    }
+
+    .landing-page {
+        height: 80vh;
+    }
+}
