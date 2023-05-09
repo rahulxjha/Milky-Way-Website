@@ -80,9 +80,12 @@ h1 {
   
   .card img {
     height: 200px;
-    
   }
-  
+
+  h1{
+    font-size: 20px;
+  }
+
   .card-content p {
     margin: 0;
   }
@@ -93,31 +96,4 @@ h1 {
     width: 100%;
   }
   
-
-  
-  @media (min-width: 768px) {
-    .card {
-      flex-direction: row;
-    }
-    
-    .card img {
-      margin-right: 10px;
-      
-    }
-    
-    .card-content {
-      text-align: left;
-    }
-    
-    .card-content button {
-      display: inline-block;
-      margin-top: 0;
-      width: auto;
-    }
-    
-    .card-content button + button {
-      margin-top: 0;
-      margin-left: 10px;
-    }
-  }
 }
