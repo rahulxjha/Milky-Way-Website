@@ -2,7 +2,7 @@
     margin: 0px;
   }
 
-.landing-page {
+#landing-page {
     background-image: url(../../img/landing-page.jpg);
     height: 100vh;
     background-position:center;
@@ -16,7 +16,7 @@
     margin: 0 auto;
 }
 
-.landing-page p {
+#landing-page p {
     animation-name: slideIn;
     animation-duration: 1.5s;
     text-align: center;
@@ -36,11 +36,11 @@
 }
 
 @media screen and (max-width: 767px) {
-    .landing-page p {
+    #landing-page p {
         font-size: 30px;
     }
 
-    .landing-page {
+    #landing-page {
         height: 80vh;
     }
 }

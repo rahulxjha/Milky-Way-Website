@@ -1,11 +1,10 @@
 import React from 'react';
-import logo from '../../img/logo.png';
-import '../Navbar/navbar.css';
-import { useSmoothScroll } from '../SmoothScroll';
+import logo from '../../img/logo.png'; 
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 function Navbar() {
-  useSmoothScroll();
   return (
+    <Router>
     <nav className="navbar">
       <React.Fragment>
         <div className="navbar-left">
@@ -13,21 +12,31 @@ function Navbar() {
         </div>
         <div className="navbar-center">
           <ul>
-            <li><a href="/Landing_Page">Home</a></li>
-            <li><a href="#product">Product</a></li>
-            <li><a href="#">Cart</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li>
+              <Link to="/landing-page">Home</Link>
+            </li>
+            <li>
+              <Link to="/product">Product</Link>
+            </li>
+            <li>
+              <Link to="/cart">Cart</Link>
+            </li>
+            <li>
+              <Link to="/contact">Contact</Link>
+            </li>
           </ul>
         </div>
         <div className="navbar-right">
           <React.Fragment>
-            <a href="#">Account</a>
+            <Link to="/account">Account</Link>
           </React.Fragment>
         </div>
       </React.Fragment>
     </nav>
+    </Router>
   );
 }
 
-
 export default Navbar;
+
+
