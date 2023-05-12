@@ -1,39 +1,38 @@
 import React from 'react';
-import logo from '../../img/logo.png'; 
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import logo from '../../img/logo.png';
+import '../Navbar/navbar.css'
 
 function Navbar() {
   return (
-    <Router>
-    <nav className="navbar">
-      <React.Fragment>
-        <div className="navbar-left">
-          <img src={logo} alt="Logo" className="logo" />
-        </div>
-        <div className="navbar-center">
-          <ul>
-            <li>
-              <Link to="/landing-page">Home</Link>
-            </li>
-            <li>
-              <Link to="/product">Product</Link>
-            </li>
-            <li>
-              <Link to="/cart">Cart</Link>
-            </li>
-            <li>
-              <Link to="/contact">Contact</Link>
-            </li>
-          </ul>
-        </div>
-        <div className="navbar-right">
-          <React.Fragment>
-            <Link to="/account">Account</Link>
-          </React.Fragment>
-        </div>
-      </React.Fragment>
-    </nav>
-    </Router>
+      <nav className="navbar">
+        <React.Fragment>
+          <div className="navbar-left">
+            <img src={logo} alt="Logo" className="logo" />
+          </div>
+          <div className="navbar-center">
+            <ul>
+              <li>
+                <a href="/">Home</a>
+              </li>
+              <li>
+                <a href="/product">Product</a>
+              </li>
+              <li>
+                <a href="/cart">Cart</a>
+              </li>
+              <li>
+                <a href="/contact">Contact</a>
+              </li>
+            </ul>
+
+          </div>
+          <div className="navbar-right">
+            <React.Fragment>
+              <a>Account</a>
+            </React.Fragment>
+          </div>
+        </React.Fragment>
+      </nav>
   );
 }
 
