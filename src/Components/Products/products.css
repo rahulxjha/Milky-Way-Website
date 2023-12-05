@@ -26,15 +26,17 @@ h1 {
   border-radius: 10px;
   box-sizing: border-box;
   width: 250px;
-  margin: 40px 40px;
+  margin: 40px 100px;
   height: 400px;
   background-color: #efebeb;
   box-sizing: border-box;
   border: 1px solid rgb(151, 151, 151);
+  transition: box-shadow 0.3s ease-in-out;
 }
 
 .card:hover {
   box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.3);
+  transition-delay: 0.1s;
 }
 
 .card img {
