@@ -68,9 +68,6 @@ function Navbar() {
           <li>
             <a href="/cart">Cart</a>
           </li>
-          <li>
-            <a href="#contact">Contact</a>
-          </li>
         </ul>
       </div>
       <div className="navbar-right">

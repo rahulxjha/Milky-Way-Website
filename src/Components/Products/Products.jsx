@@ -62,7 +62,7 @@ const Products = () => {
                 <div class="card">
                     <img src={butter} alt="butter" />
                     <div class="card-content">
-                        <h2>Paneer</h2>
+                        <h2>Butter</h2>
                         <p>Fresh milky butter . <br />Price: 400<span>&#8377;</span> for 1 Kg. </p>
                         <button className='btn'>Add to cart</button>
                         <button className='btn'>Buy Now</button>
