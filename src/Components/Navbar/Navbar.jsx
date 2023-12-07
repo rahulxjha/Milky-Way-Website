@@ -15,7 +15,7 @@ function Navbar() {
   const toggleSignUpModal = () => {
     setLoginModalOpen(false);
     setSignUpModalOpen((prev) => !prev);
-
+  };
 
   const closeLoginModal = () => {
     setLoginModalOpen(false);
@@ -23,7 +23,7 @@ function Navbar() {
 
   const closeSignUpModal = () => {
     setSignUpModalOpen(false);
-  }
+  };
 
   const handleModalOverlayClick = (e) => {
     if (modalOverlayRef.current && !modalOverlayRef.current.contains(e.target)) {
@@ -74,7 +74,6 @@ function Navbar() {
         </ul>
       </div>
       <div className="navbar-right">
-
         <a className='user-info' onClick={toggleLoginModal}>
           Sign in
         </a>
@@ -82,6 +81,7 @@ function Navbar() {
           Sign up
         </a>
       </div>
+
       {isLoginModalOpen && (
         <div className="modal-overlay">
           <div className="modal">
@@ -114,59 +114,11 @@ function Navbar() {
               <label>Password : <br /> <input type="password" /></label>
               <br />
               <button id="sub-btn" type="submit">Sign up</button>
-              <button id="close-btn" onClick={closeLoginModal}>Close</button>
-            </form>
-          </div>
-        </div>
-      )}
-      {isSignUpModalOpen && (
-        <div className="modal-overlay">
-          <div className="modal">
-            <h2>Welcome! We're excited to have you on board.</h2>
-            <form id='signup-form'>
-              <label>
-                First Name :
-                <br />
-                <input type="text" />
-              </label>
-              <br />
-              <label>
-                Last Name :
-                <br />
-                <input type="text" />
-              </label>
-              <br />
-              <label>
-                Phone No. :
-                <br />
-                <input type="text" />
-              </label>
-              <br />
-              <label>
-                Address :
-                <br />
-                <input type="text" />
-              </label>
-              <br />
-              <label>
-                Email :
-                <br />
-                <input type="text" />
-              </label>
-              <br />
-              <label>
-                Password :
-                <br />
-                <input type="password" />
-              </label>
-              <br />
-              <button id="sub-btn" type="submit">Sign up</button>
               <button id="close-btn" onClick={closeSignUpModal}>Close</button>
             </form>
           </div>
         </div>
       )}
-
     </nav>
   );
 }
