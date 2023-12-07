@@ -63,13 +63,13 @@ function Navbar() {
             <a href="/">Home</a>
           </li>
           <li>
-            <a href="/product">Product</a>
+            <a href="#product">Product</a>
           </li>
           <li>
             <a href="/cart">Cart</a>
           </li>
           <li>
-            <a href="/contact">Contact</a>
+            <a href="#contact">Contact</a>
           </li>
         </ul>
       </div>
@@ -87,9 +87,9 @@ function Navbar() {
           <div className="modal">
             <h2>Welcome back!</h2>
             <form id='login-form'>
-              <label>Email:<input type="text" /></label>
+              <label>Email: <br /> <input type="text" /></label>
               <br />
-              <label>Password:<input type="password" /></label>
+              <label>Password: <br /> <input type="password" /></label>
               <br />
               <button id="sub-btn" type="submit">Sign in</button>
               <button id="close-btn" onClick={closeLoginModal}>Close</button>

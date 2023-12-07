@@ -75,7 +75,8 @@
   cursor: pointer;
 }
 
-#login-form, #signup-form{
+#login-form,
+#signup-form {
   display: flex;
   flex-direction: column;
 }
@@ -86,16 +87,15 @@
   border-radius: 4px;
   font-size: 1rem;
   margin-top: 0.5rem;
-  margin-right: 10px;
-  width: 100%;
+  width: 270px;
 }
 
-#signup-form>label{
+#signup-form>label {
   margin-top: 10PX;
   margin-bottom: -10px;
 }
 
-#signup-form>label>input{
+#signup-form>label>input {
   padding: 0.5rem;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -139,7 +139,7 @@
   margin-bottom: 1rem;
 }
 
-#close-btn{
+#close-btn {
   background-color: rgb(255, 145, 0);
   color: white;
   border: none;
@@ -173,14 +173,13 @@
 
   .navbar-right {
     margin-top: 10px;
-    background-color: rgba(0, 0, 0, 0.5);
     border-radius: 2px;
     padding: 1px 4px;
   }
 
   .navbar-right a {
     font-size: 0.93rem;
-    color: white;
+    color: black;
     transition: color 0.3s ease-in-out;
   }
 
@@ -192,4 +191,19 @@
     height: 38px;
     cursor: pointer;
   }
+
+  .modal-overlay {
+    top: 110px;
+  }
+
+  .modal {
+    margin-top: -130px;
+    width: 350px;
+  }
+
+  #signup-form>label>input,
+  #login-form>label>input {
+    width: 330px;
+  }
+
 }
