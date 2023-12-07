@@ -4,6 +4,7 @@ import doodh from '../../img/doodh.jpg';
 import dahi from '../../img/dahi.jpg';
 import ghee from '../../img/ghee.jpg';
 import paneer from '../../img/paneer.jpg';
+import butter from '../../img/butter.jpg';
 
 
 const Products = () => {
@@ -52,6 +53,17 @@ const Products = () => {
                     <div class="card-content">
                         <h2>Paneer</h2>
                         <p>Fresh high protein paneer . <br />Price: 280<span>&#8377;</span> for 1 Kg. </p>
+                        <button className='btn'>Add to cart</button>
+                        <button className='btn'>Buy Now</button>
+                    </div>
+                </div>
+
+                {/* Card 5 */}
+                <div class="card">
+                    <img src={butter} alt="butter" />
+                    <div class="card-content">
+                        <h2>Paneer</h2>
+                        <p>Fresh milky butter . <br />Price: 400<span>&#8377;</span> for 1 Kg. </p>
                         <button className='btn'>Add to cart</button>
                         <button className='btn'>Buy Now</button>
                     </div>
