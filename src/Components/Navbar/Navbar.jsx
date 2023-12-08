@@ -5,6 +5,13 @@ import '../Navbar/navbar.css';
 function Navbar() {
   const [isLoginModalOpen, setLoginModalOpen] = useState(false);
   const [isSignUpModalOpen, setSignUpModalOpen] = useState(false);
+  const [formData, setFormData] = useState({
+    name: '',
+    phoneNum: '',
+    address: '',
+    email: '',
+    password: '',
+  });
   const modalOverlayRef = useRef(null);
 
   const toggleLoginModal = () => {
@@ -23,6 +30,36 @@ function Navbar() {
 
   const closeSignUpModal = () => {
     setSignUpModalOpen(false);
+  };
+
+  const handleSubmitSignUp = async (e) => {
+    e.preventDefault();
+
+    try {
+      const response = await fetch('http://localhost:8085/api/v1/api/v1/user', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          phoneNum: formData.phoneNum,
+          address: formData.address,
+          email: formData.email,
+          password: formData.password,
+        }),
+      });
+
+      if (response.ok) {
+        const result = await response.json();
+        console.log(result);
+      } else {
+        // Handle error cases
+        console.error('Failed to sign up');
+      }
+    } catch (error) {
+      console.error('Error during sign up:', error);
+    }
   };
 
   const handleModalOverlayClick = (e) => {
@@ -99,16 +136,16 @@ function Navbar() {
         <div className="modal-overlay">
           <div className="modal">
             <h2>Welcome! We're excited to have you on board.</h2>
-            <form id='signup-form'>
-              <label>Name : <br /><input type="text" /></label>
+            <form id='signup-form' onSubmit={handleSubmitSignUp}>
+              <label>Name : <br /><input type="text" value={formData.name} onChange={(e) => setFormData({...formData, name: e.target.value})}/></label>
               <br />
-              <label>Phone No. : <br /> <input type="text" /></label>
+              <label>Phone No. : <br /> <input type="text" value={formData.phoneNum} onChange={(e) => setFormData({...formData, phoneNum: e.target.value})}/></label>
               <br />
-              <label>Address : <br /> <input type="text" /></label>
+              <label>Address : <br /> <input type="text" value={formData.address} onChange={(e) => setFormData({...formData, address: e.target.value})}/></label>
               <br />
-              <label>Email : <br /> <input type="text" /></label>
+              <label>Email : <br /> <input type="text" value={formData.email} onChange={(e) => setFormData({...formData, email: e.target.value})}/></label>
               <br />
-              <label>Password : <br /> <input type="password" /></label>
+              <label>Password : <br /> <input type="password" value={formData.password} onChange={(e) => setFormData({...formData, password: e.target.value})}/></label>
               <br />
               <button id="sub-btn" type="submit">Sign up</button>
               <button id="close-btn" onClick={closeSignUpModal}>Close</button>

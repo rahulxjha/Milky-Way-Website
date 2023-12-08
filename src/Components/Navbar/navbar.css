@@ -81,13 +81,26 @@
   flex-direction: column;
 }
 
-#login-form>label>input {
+#signup-form {
+  height: 500px;
+}
+
+#login-form > label > input {
   padding: 0.5rem;
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 1rem;
-  margin-top: 0.5rem;
-  width: 270px;
+  font-family: 'Quicksand';
+  margin-top: 0.3rem;
+  width: 100%; 
+  box-sizing: border-box; 
+  transition: border-color 0.3s ease-in-out; 
+  outline: none;
+}
+
+#login-form > label > input:focus {
+  border-color: #007bff; 
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); 
 }
 
 #signup-form>label {
@@ -95,13 +108,22 @@
   margin-bottom: -10px;
 }
 
-#signup-form>label>input {
+#signup-form > label > input {
   padding: 0.5rem;
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 1rem;
+  font-family: 'Quicksand';
   margin-top: 0.3rem;
-  width: 500px;
+  width: 100%; 
+  box-sizing: border-box; 
+  transition: border-color 0.3s ease-in-out; 
+  outline: none;
+}
+
+#signup-form > label > input:focus {
+  border-color: #007bff; /* Example focus color, change it to your preference */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Example box shadow for focus */
 }
 
 .modal-overlay {
@@ -118,11 +140,10 @@
 }
 
 .modal {
-  margin-top: -60px;
+  margin-top: -70px;
   background: white;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 #sub-btn {
