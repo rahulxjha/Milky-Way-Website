@@ -36,7 +36,7 @@ function Navbar() {
     e.preventDefault();
 
     try {
-      const response = await fetch('http://localhost:8085/api/v1/api/v1/user', {
+      const response = await fetch('http://localhost:8085/api/v1/user', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -52,9 +52,17 @@ function Navbar() {
 
       if (response.ok) {
         const result = await response.json();
+        alert(`Signed up successfully!`);
+        setFormData({
+          name: '',
+          phoneNum: '',
+          address: '',
+          email: '',
+          password: '',
+        });
+        closeSignUpModal();
         console.log(result);
       } else {
-        // Handle error cases
         console.error('Failed to sign up');
       }
     } catch (error) {
